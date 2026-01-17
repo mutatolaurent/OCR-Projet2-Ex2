@@ -5,6 +5,7 @@ html, body {
 }
 
 * {
+    /* Les dimensions des éléments de type box inclus le padding + la bordure */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -12,6 +13,7 @@ html, body {
 
 a {
     text-decoration: none;
+    /* Hérite de la couleur de son élément parent */
     color: inherit;
 }
 
