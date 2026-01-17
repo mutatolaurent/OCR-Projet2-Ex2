@@ -5,7 +5,7 @@ html, body {
 }
 
 * {
-    /* Les dimensions des éléments de type box inclus le padding + la bordure */
+    /* Les dimensions des éléments de type box comprennent le padding + la bordure */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
