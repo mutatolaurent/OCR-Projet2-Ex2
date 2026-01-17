@@ -2,6 +2,7 @@
 include 'header.php';
 include 'oeuvres.php';
 
+// Récupèration de l'identifiant de l'oeuvre passé en paramètre de la page
 $id = $_GET['id'];
 
 // Contrôle de l'existence de l'ID et récupération des données de l'œuvre
@@ -12,6 +13,8 @@ foreach ($oeuvres as $oeuvre) {
         break;
     }
 }
+
+// Si l'oeuvre n'est pas trouvé => affichage d'un message d'erreur
 if ($oeuvreTrouvee === null) {
     echo "<p>Œuvre non trouvée.</p>";
     include 'footer.php';
@@ -19,6 +22,7 @@ if ($oeuvreTrouvee === null) {
 }
 ?>
 
+<!-- Affichage des détails de l'oeuvre -->
 <article id="detail-oeuvre">
     <div id="img-oeuvre">
         <img src="<?php echo htmlspecialchars($oeuvreTrouvee['image']); ?>" alt="<?php echo htmlspecialchars($oeuvreTrouvee['titre']); ?>">
@@ -31,4 +35,6 @@ if ($oeuvreTrouvee === null) {
         </p>
     </div>
 </article>
+
+<!-- Inclusion du pide de page du site -->
 <?php include 'footer.php'; ?>
